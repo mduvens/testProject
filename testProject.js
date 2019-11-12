@@ -116,8 +116,8 @@ domEvents.bind(sphere, 'mouseout', function () {
 })
 
 domEvents.addEventListener(squareAbout, 'mouseout', () => {
-    cubes = new Physijs.BoxMesh(new THREE.CubeGeometry(10,10,10), Physijs.createMaterial(new THREE.MeshStandardMaterial({
-        color: 0x000000
+    cubes = new Physijs.BoxMesh(new THREE.BoxGeometry(10,10,10,5,5), Physijs.createMaterial(new THREE.MeshStandardMaterial({
+        color: 0x000000, wireframe: true
     }), .1, .7))
     cubes.position.set(Math.random() * 100 - 50,10,Math.random() * 100 - 50)
     //cube1.position.set((Math.random() * 100 - 50), 150, (Math.random() * 100 - 50))
